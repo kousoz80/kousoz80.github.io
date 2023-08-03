@@ -157,7 +157,7 @@ var mizokei;
 var fukasa;
 var input0;
 var g_code;
-var STATE_74127709, STATE2_74127709;
+var STATE_719659316, STATE2_719659316;
 var vLABEL0=document.getElementById('LABEL0');
 function mizokei_input(){
 }
@@ -186,16 +186,16 @@ function Start0(){
 function _PSTART(){
 Start();
 }
-function _689384192_in(t){
+function _201039320_in(t){
 mizokei=t;
 }
-function _1813356614_in(t){
+function _1153301597_in(t){
 fukasa=t;
 }
-function _891322740_in(t){
+function _985272998_in(t){
 g_code=t;
 }
-function _1338394512_in(){
+function _1324948067_in(){
 // 修正したGコードを表示する
 
 
@@ -209,7 +209,7 @@ var items = '';
 let L_array = [];
 let S_array = [];
 let w_array = [];
-var lines=in0.split('\n');
+var lines=in0.split(/\r\n|\n/);
 var nn=lines.length;
 for(let i=0;i<nn;i++){
 items=lines[i].split(/\s+/);
@@ -263,48 +263,48 @@ g_code.innerText=
 
 }
 }
-function _1859027535_in(t){
+function _1008086416_in(t){
 input0=t;
 }
 function Start(){
-STATE2_74127709 = STATE_74127709;
-_179103648_in0();
+STATE2_719659316 = STATE_719659316;
+_655549269_in0();
 }
 function mizokei_created(t){
-STATE2_74127709 = STATE_74127709;
-_689384192_in(t);
+STATE2_719659316 = STATE_719659316;
+_201039320_in(t);
 }
 function fukasa_created(t){
-STATE2_74127709 = STATE_74127709;
-_1813356614_in(t);
+STATE2_719659316 = STATE_719659316;
+_1153301597_in(t);
 }
 function hyouji_button_clicked(){
-STATE2_74127709 = STATE_74127709;
-_1338394512_in();
+STATE2_719659316 = STATE_719659316;
+_1324948067_in();
 }
 function g_code_created(t){
-STATE2_74127709 = STATE_74127709;
-_891322740_in(t);
+STATE2_719659316 = STATE_719659316;
+_985272998_in(t);
 }
 function input_created(t){
-STATE2_74127709 = STATE_74127709;
-_1859027535_in(t);
+STATE2_719659316 = STATE_719659316;
+_1008086416_in(t);
 }
-function _179103648_in0(){
-if( STATE2_74127709 != 244544045 )  return;
+function _655549269_in0(){
+if( STATE2_719659316 != 1872428538 )  return;
 // GUIを作成する
 Start0();
 
 
 /*   InitState に遷移する */
- _SINIT_74127709();
+ _SINIT_719659316();
 }
 
 /*   InitState*/
-function _SINIT_74127709(){
-STATE_74127709=244544045;
+function _SINIT_719659316(){
+STATE_719659316=1872428538;
 }
-_SINIT_74127709();
+_SINIT_719659316();
 _PSTART();
 
 </script>
