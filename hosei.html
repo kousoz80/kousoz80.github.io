@@ -157,7 +157,7 @@ var mizokei;
 var fukasa;
 var input0;
 var g_code;
-var STATE_719659316, STATE2_719659316;
+var STATE_1448706339, STATE2_1448706339;
 var vLABEL0=document.getElementById('LABEL0');
 function mizokei_input(){
 }
@@ -186,16 +186,16 @@ function Start0(){
 function _PSTART(){
 Start();
 }
-function _201039320_in(t){
+function _674036023_in(t){
 mizokei=t;
 }
-function _1153301597_in(t){
+function _2132871045_in(t){
 fukasa=t;
 }
-function _985272998_in(t){
+function _432935678_in(t){
 g_code=t;
 }
-function _1324948067_in(){
+function _1831758582_in(){
 // 修正したGコードを表示する
 
 
@@ -206,12 +206,13 @@ var a0=parseFloat(fukasa.value);
 var in0=input0.value;
 var items = '';
 
-let L_array = [];
-let S_array = [];
-let w_array = [];
+var L_array = new Array(0);
+var S_array = new Array(0);
+var w_array = new Array(0);
 var lines=in0.split(/\r\n|\n/);
 var nn=lines.length;
-for(let i=0;i<nn;i++){
+var i=0;
+for(i=0;i<nn;i++){
 items=lines[i].split(/\s+/);
 L_array.push(items[0]);
 S_array.push(items[1]);
@@ -220,10 +221,12 @@ w_array.push(items[2]);
 
 
 
+
 var L=0;
 var S=0;
 var w=0;
-for(let j=0;j<nn;j++){
+var j=0;
+for(j=0;j<nn;j++){
 if(isNaN(L_array[j])){ nn=j; break;}
 if(isNaN(S_array[j])){ nn=j; break;}
 if(isNaN(w_array[j])){ nn=j; break;}
@@ -263,48 +266,48 @@ g_code.innerText=
 
 }
 }
-function _1008086416_in(t){
+function _120173291_in(t){
 input0=t;
 }
 function Start(){
-STATE2_719659316 = STATE_719659316;
-_655549269_in0();
+STATE2_1448706339 = STATE_1448706339;
+_472768489_in0();
 }
 function mizokei_created(t){
-STATE2_719659316 = STATE_719659316;
-_201039320_in(t);
+STATE2_1448706339 = STATE_1448706339;
+_674036023_in(t);
 }
 function fukasa_created(t){
-STATE2_719659316 = STATE_719659316;
-_1153301597_in(t);
+STATE2_1448706339 = STATE_1448706339;
+_2132871045_in(t);
 }
 function hyouji_button_clicked(){
-STATE2_719659316 = STATE_719659316;
-_1324948067_in();
+STATE2_1448706339 = STATE_1448706339;
+_1831758582_in();
 }
 function g_code_created(t){
-STATE2_719659316 = STATE_719659316;
-_985272998_in(t);
+STATE2_1448706339 = STATE_1448706339;
+_432935678_in(t);
 }
 function input_created(t){
-STATE2_719659316 = STATE_719659316;
-_1008086416_in(t);
+STATE2_1448706339 = STATE_1448706339;
+_120173291_in(t);
 }
-function _655549269_in0(){
-if( STATE2_719659316 != 1872428538 )  return;
+function _472768489_in0(){
+if( STATE2_1448706339 != 1280129746 )  return;
 // GUIを作成する
 Start0();
 
 
 /*   InitState に遷移する */
- _SINIT_719659316();
+ _SINIT_1448706339();
 }
 
 /*   InitState*/
-function _SINIT_719659316(){
-STATE_719659316=1872428538;
+function _SINIT_1448706339(){
+STATE_1448706339=1280129746;
 }
-_SINIT_719659316();
+_SINIT_1448706339();
 _PSTART();
 
 </script>
