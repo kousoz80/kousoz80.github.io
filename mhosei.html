@@ -70,102 +70,46 @@
  font-size: 16px;
 }
 </style>
-<div id="LABEL4" class="css_LABEL4">
-角度
-</div>
-<style>
-.css_LABEL4{
- position: absolute;
- left: 60px;
- top: 114px;
- width: 53px;
- height: 22px;
- background: #d7fdd7;
- color: #333333;
- font-size: 14px;
- text-align: left;;
- vertical-align: top;;
-}
-</style>
-<input type="text" id="kakudo" value="0" class="css_kakudo">
-<style>
-.css_kakudo{
- position: absolute;
- left: 132px;
- top: 108px;
- width: 95px;
- height: 30px;
- background: #ffffff;
- color: #333333;
- font-size: 16px;
-}
-</style>
 <div id="LABEL6" class="css_LABEL6">
-最大値
+測定結果を最大値、最小値、角度の順に空白で区切って
 </div>
 <style>
 .css_LABEL6{
  position: absolute;
- left: 50px;
- top: 164px;
- width: 55px;
- height: 20px;
+ left: 23px;
+ top: 100px;
+ width: 404px;
+ height: 23px;
  background: #d7fdd7;
  color: #333333;
- font-size: 14px;
+ font-size: 16px;
  text-align: left;;
  vertical-align: top;;
 }
 </style>
-<input type="text" id="saidai" value="46.95" class="css_saidai">
-<style>
-.css_saidai{
- position: absolute;
- left: 131px;
- top: 156px;
- width: 95px;
- height: 31px;
- background: #ffffff;
- color: #333333;
- font-size: 16px;
-}
-</style>
 <div id="LABEL8" class="css_LABEL8">
-最小値
+入力して下さい(複数行入力できます)
 </div>
 <style>
 .css_LABEL8{
  position: absolute;
- left: 53px;
- top: 208px;
- width: 54px;
- height: 23px;
+ left: 21px;
+ top: 125px;
+ width: 313px;
+ height: 24px;
  background: #d7fdd7;
  color: #333333;
- font-size: 14px;
+ font-size: 16px;
  text-align: left;;
  vertical-align: top;;
-}
-</style>
-<input type="text" id="saishou" value="46.85" class="css_saishou">
-<style>
-.css_saishou{
- position: absolute;
- left: 127px;
- top: 203px;
- width: 100px;
- height: 33px;
- background: #ffffff;
- color: #333333;
- font-size: 16px;
 }
 </style>
 <input type="button" id="hyouji_button" value="切削プログラムを表示する" class="css_hyouji_button">
 <style>
 .css_hyouji_button{
  position: absolute;
- left: 36px;
- top: 256px;
+ left: 65px;
+ top: 276px;
  width: 237px;
  height: 35px;
  background: #c0c0c0;
@@ -181,8 +125,8 @@
 <style>
 .css_g_code{
  position: absolute;
- left: 8px;
- top: 304px;
+ left: 6px;
+ top: 327px;
  width: 450px;
  height: 257px;
  background: #fefefe;
@@ -192,15 +136,28 @@
  vertical-align: top;;
 }
 </style>
+<textarea id="input" class="css_input">
+
+</textarea>
+<style>
+.css_input{
+ position: absolute;
+ left: 17px;
+ top: 153px;
+ width: 389px;
+ height: 110px;
+ background: #ffffff;
+ color: #333333;
+ font-size: 20px;
+}
+</style>
 
 <script>
 var mizokei;
 var fukasa;
-var kakudo;
-var saidai;
-var saishou;
+var input0;
 var g_code;
-var STATE_1045727760, STATE2_1045727760;
+var STATE_1562545410, STATE2_1562545410;
 var vLABEL0=document.getElementById('LABEL0');
 function mizokei_input(){
 }
@@ -211,68 +168,78 @@ function fukasa_input(){
 }
 var vfukasa=document.getElementById('fukasa');
 vfukasa.oninput=fukasa_input;
-var vLABEL4=document.getElementById('LABEL4');
-function kakudo_input(){
-}
-var vkakudo=document.getElementById('kakudo');
-vkakudo.oninput=kakudo_input;
 var vLABEL6=document.getElementById('LABEL6');
-function saidai_input(){
-}
-var vsaidai=document.getElementById('saidai');
-vsaidai.oninput=saidai_input;
 var vLABEL8=document.getElementById('LABEL8');
-function saishou_input(){
-}
-var vsaishou=document.getElementById('saishou');
-vsaishou.oninput=saishou_input;
 function hyouji_button_click(){
  hyouji_button_clicked();
 }
 var vhyouji_button=document.getElementById('hyouji_button');
 vhyouji_button.onclick=hyouji_button_click;
 var vg_code=document.getElementById('g_code');
+var vinput=document.getElementById('input');
 function Start0(){
  mizokei_created(vmizokei);
  fukasa_created(vfukasa);
- kakudo_created(vkakudo);
- saidai_created(vsaidai);
- saishou_created(vsaishou);
  g_code_created(vg_code);
+ input_created(vinput);
 }
 function _PSTART(){
 Start();
 }
-function _523708006_in(t){
+function _291982211_in(t){
 mizokei=t;
 }
-function _1513466852_in(t){
+function _585697496_in(t){
 fukasa=t;
 }
-function _897448521_in(t){
-kakudo=t;
-}
-function _1797632864_in(t){
-saishou=t;
-}
-function _974804139_in(t){
-saidai=t;
-}
-function _1300741236_in(t){
+function _549247676_in(t){
 g_code=t;
 }
-function _1626299923_in(){
+function _1415962475_in(){
 // 修正したGコードを表示する
-
 
 
 
 
 var D0=parseFloat(mizokei.value);
 var a0=parseFloat(fukasa.value);
-var w=parseFloat(kakudo.value); w=(w-90)*6.2832/360;
-var L=parseFloat(saidai.value);
-var S=parseFloat(saishou.value);
+var in0=input0.value;
+var items = '';
+
+var L_array = new Array(0);
+var S_array = new Array(0);
+var w_array = new Array(0);
+var lines=in0.split(/\r\n|\n/);
+var nn=lines.length;
+var i=0;
+for(i=0;i<nn;i++){
+items=lines[i].split(/\s+/);
+L_array.push(items[0]);
+S_array.push(items[1]);
+w_array.push(items[2]);
+}
+
+
+
+
+var L=0;
+var S=0;
+var w=0;
+var j=0;
+for(j=0;j<nn;j++){
+if(isNaN(L_array[j])){ nn=j; break;}
+if(isNaN(S_array[j])){ nn=j; break;}
+if(isNaN(w_array[j])){ nn=j; break;}
+L=L+parseFloat(L_array[j]);
+S=S+parseFloat(S_array[j]);
+w=w+parseFloat(w_array[j]);
+}
+
+if(nn>0){
+
+L=L/nn;
+S=S/nn;
+w=(w/nn-90)*6.2832/360;
 
 var R0=a0+(L-D0)/2;
 var R1=a0+(S-D0)/2;
@@ -284,6 +251,8 @@ var Y0= R0*Math.sin(w);if(Math.abs(Y0)<0.001) Y0=0;
 var X1=-R1*Math.sin(w);if(Math.abs(X1)<0.001) X1=0;
 var Y1= R1*Math.cos(w);if(Math.abs(Y1)<0.001) Y1=0;
 
+
+
 g_code.innerText=
 '切削プログラム\n'+
 'G0 Z0.0 ;\n'+
@@ -293,57 +262,52 @@ g_code.innerText=
 'G3 X'+(-X1.toPrecision(4))+' Y'+Y1.toPrecision(4)+' R'+R.toPrecision(6)+' ;\n'+
 'G3 X'+X0.toPrecision(4)+' Y'+(-Y0.toPrecision(4))+' R'+R.toPrecision(6)+' ;\n'+
 'G1 X 0.0 Y0.0 F300 ;\n'+
-'G0 Z20.0 ;\n'+
-'';
+'G0 Z20.0 ;\n';
 
 }
+}
+function _1524156231_in(t){
+input0=t;
+}
 function Start(){
-STATE2_1045727760 = STATE_1045727760;
-_617698319_in0();
+STATE2_1562545410 = STATE_1562545410;
+_1104972574_in0();
 }
 function mizokei_created(t){
-STATE2_1045727760 = STATE_1045727760;
-_523708006_in(t);
+STATE2_1562545410 = STATE_1562545410;
+_291982211_in(t);
 }
 function fukasa_created(t){
-STATE2_1045727760 = STATE_1045727760;
-_1513466852_in(t);
-}
-function kakudo_created(t){
-STATE2_1045727760 = STATE_1045727760;
-_897448521_in(t);
-}
-function saidai_created(t){
-STATE2_1045727760 = STATE_1045727760;
-_974804139_in(t);
-}
-function saishou_created(t){
-STATE2_1045727760 = STATE_1045727760;
-_1797632864_in(t);
+STATE2_1562545410 = STATE_1562545410;
+_585697496_in(t);
 }
 function hyouji_button_clicked(){
-STATE2_1045727760 = STATE_1045727760;
-_1626299923_in();
+STATE2_1562545410 = STATE_1562545410;
+_1415962475_in();
 }
 function g_code_created(t){
-STATE2_1045727760 = STATE_1045727760;
-_1300741236_in(t);
+STATE2_1562545410 = STATE_1562545410;
+_549247676_in(t);
 }
-function _617698319_in0(){
-if( STATE2_1045727760 != 950275823 )  return;
+function input_created(t){
+STATE2_1562545410 = STATE_1562545410;
+_1524156231_in(t);
+}
+function _1104972574_in0(){
+if( STATE2_1562545410 != 1963370813 )  return;
 // GUIを作成する
 Start0();
 
 
 /*   InitState に遷移する */
- _SINIT_1045727760();
+ _SINIT_1562545410();
 }
 
 /*   InitState*/
-function _SINIT_1045727760(){
-STATE_1045727760=950275823;
+function _SINIT_1562545410(){
+STATE_1562545410=1963370813;
 }
-_SINIT_1045727760();
+_SINIT_1562545410();
 _PSTART();
 
 </script>
